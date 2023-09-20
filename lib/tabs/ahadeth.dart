@@ -6,7 +6,7 @@ import 'package:islami_c9_mon/models/hadeth_model.dart';
 import '../const_app_theme/my_theme_data.dart';
 
 class AhadethTab extends StatefulWidget {
-  AhadethTab({super.key});
+   AhadethTab({super.key});
 
   @override
   State<AhadethTab> createState() => _AhadethTabState();
