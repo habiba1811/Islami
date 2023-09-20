@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c9_mon/dedails/hadeth_details.dart';
 
 import 'const_app_theme/my_theme_data.dart';
 import 'dedails/sura_details.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SuraDetails.routeName: (context) => SuraDetails(),
+        HadethDetails.routeName: (context) => HadethDetails(),
       },
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
