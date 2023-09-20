@@ -13,7 +13,7 @@ class AhadethTab extends StatefulWidget {
 }
 
 class _AhadethTabState extends State<AhadethTab> {
-  List<HadethModel> allAhadeth = [];
+List<HadethModel> allAhadeth = [];
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class _AhadethTabState extends State<AhadethTab> {
     );
   }
 
-  loadHadeth() async {
+loadHadeth() async {
     rootBundle.loadString('assets/files/ahadeth.txt').then((ahadeth) {
       List<String> ahadethList = ahadeth.split('#');
       for (int i = 0; i <= ahadethList.length; i++) {
