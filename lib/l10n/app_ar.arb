@@ -1,5 +1,7 @@
 {
   "appTitle": "إسلامى",
   "suraName": "اسم السورة",
-  "ahadeth": "الأحاديث"
+  "ahadeth": "الأحاديث",
+  "english": "انجليزى",
+  "arabic": "عربي"
 }
