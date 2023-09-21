@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami_c9_mon/dedails/hadeth_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'const_app_theme/my_theme_data.dart';
+import 'dedails/hadeth_details.dart';
 import 'dedails/sura_details.dart';
 import 'home.dart';
 
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('ar'),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),

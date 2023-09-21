@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_c9_mon/dedails/hadeth_details.dart';
 import 'package:islami_c9_mon/models/hadeth_model.dart';
 
@@ -25,7 +26,7 @@ List<HadethModel> allAhadeth = [];
           thickness: 3.0,
           color: MyThemeData.primary,
         ),
-        const Text('Ahadeth'),
+        Text(AppLocalizations.of(context)!.ahadeth),
         const Divider(
           thickness: 3.0,
           color: MyThemeData.primary,
