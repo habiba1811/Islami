@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 import '../bottom_sheets/show_language_bottom_sheet.dart';
+import '../bottom_sheets/show_theming_bottom_sheet.dart';
 import '../const_app_theme/my_theme_data.dart';
 import '../providers/my_provider.dart';
 
@@ -22,7 +23,7 @@ class _SettingsTabState extends State<SettingsTab> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Language'),
+          Text(AppLocalizations.of(context)!.language),
           InkWell(
             onTap: () {
               showLanguageBottomSheet(context);
@@ -43,7 +44,7 @@ class _SettingsTabState extends State<SettingsTab> {
           SizedBox(
             height: 18.0,
           ),
-          Text('Mode'),
+          Text(AppLocalizations.of(context)!.mode),
           InkWell(
             onTap: () {
               showThemeingBottomSheet();
@@ -56,7 +57,9 @@ class _SettingsTabState extends State<SettingsTab> {
                   border: Border.all(
                     color: MyThemeData.primary,
                   )),
-              child: Text('Light'),
+              child: Text(provider.theme == ThemeMode.light
+                  ? AppLocalizations.of(context)!.light
+                  : AppLocalizations.of(context)!.dark),
             ),
           ),
         ],
@@ -89,11 +92,9 @@ class _SettingsTabState extends State<SettingsTab> {
             topRight: Radius.circular(18.0),
           ),
           borderSide: BorderSide(color: Colors.transparent)),
-      isScrollControlled: true,
+      //isScrollControlled: true,
       builder: (context) {
-        return Container(
-          height: MediaQuery.of(context).size.height * .6,
-        );
+        return ThemingBottomSheet();
       },
     );
   }

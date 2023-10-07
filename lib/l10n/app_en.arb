@@ -3,5 +3,14 @@
   "suraName": "Sura Name",
   "ahadeth": "Ahadeth",
   "english": "English",
-  "arabic": "Arabic"
+  "arabic": "Arabic",
+  "dark": "Dark",
+  "light": "Light",
+  "sebha": "Sebha",
+  "quran": "Qran",
+  "settings": "Settings",
+  "radio": "Radio",
+  "numberOfTasbehat": "Number Of Tasbehat",
+  "mode": "Mode",
+  "language": "Language"
 }

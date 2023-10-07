@@ -3,5 +3,14 @@
   "suraName": "اسم السورة",
   "ahadeth": "الأحاديث",
   "english": "انجليزى",
-  "arabic": "عربي"
+  "arabic": "عربي",
+  "dark": "ليلي",
+  "light": "نهارى",
+  "sebha": "السبحة",
+  "quran": "قرآن",
+  "settings": "الاعدادات",
+  "radio": "الراديو",
+  "numberOfTasbehat": "عدد التسبيحات",
+  "mode": "مظهر التطبيق",
+  "language": "اللغة"
 }

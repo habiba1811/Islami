@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_c9_mon/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../const_app_theme/my_theme_data.dart';
 import '../dedails/sura_details.dart';
@@ -127,6 +129,7 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Center(
       child: Column(
         children: [
@@ -159,10 +162,10 @@ class QuranTab extends StatelessWidget {
                   },
                   child: Text(
                     suraNames[index],
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: MyThemeData.blackColor),
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: provider.theme == ThemeMode.light
+                            ? Theme.of(context).colorScheme.onPrimary
+                            : Colors.white),
                     textAlign: TextAlign.center,
                   ),
                 );
